@@ -1,18 +1,26 @@
 .App {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
 }
 
+/* Logo */
 .App-logo {
-  height: 40vmin;
+  max-width: 100%;
+  height: auto;
   pointer-events: none;
 }
 
+/* Smooth animation for logo */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* Header styling */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -20,19 +28,49 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(12px + 1.5vmin);
+  padding: 20px;
+  box-sizing: border-box;
   color: white;
 }
 
+/* Links */
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+.App-link:hover {
+  color: #21a1f1;
+}
+
+/* Animations */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {   /* Tablets */
+  .App-header {
+    font-size: calc(10px + 2vmin);
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {   /* Phones */
+  .App-header {
+    font-size: calc(8px + 2vmin);
+    padding: 10px;
+  }
+
+  .App-logo {
+    width: 70%;
+    height: auto;
   }
 }
