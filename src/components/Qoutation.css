@@ -49,3 +49,41 @@
   font-size: 1.1rem;
   color: #333;
 }
+/* Responsive typography */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0 0 1em 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) { /* Tablets */
+  body {
+    padding: 0 15px;
+    font-size: 0.95em;
+  }
+
+  code {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) { /* Small tablets / large phones */
+  body {
+    padding: 0 10px;
+    font-size: 0.9em;
+  }
+
+  code {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) { /* Phones */
+  body {
+    padding: 0 8px;
+    font-size: 0.85em;
+  }
+
+  code {
+    font-size: 0.8em;
+  }
+}

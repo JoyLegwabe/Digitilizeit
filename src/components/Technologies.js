@@ -6,15 +6,15 @@ const Technologies = () => {
     <div className="technologies-page">
       <h2>🚀 Our Services</h2>
       <div className="service-list">
-        <div className="service-box">💻 Web Development</div>
-        <div className="service-box">📱 Mobile App Development</div>
-        <div className="service-box">🎨 UI/UX Design</div>
-        <div className="service-box">🛠 IT Support</div>
-        <div className="service-box">🔧 Software Maintenance</div>
+        <div className="service-box"> Web Development</div>
+        <div className="service-box"> Mobile App Development</div>
+        <div className="service-box"> UI/UX Design</div>
+        <div className="service-box"> IT Support</div>
+        <div className="service-box"> Software Maintenance</div>
       </div>
 
       <div className="our-work-section">
-        <h2>🌟 Our Work</h2>
+        <h2> Our Work</h2>
         <p>Check out the websites and designs we’ve created for our amazing clients.</p>
         
         <div className="video-container">

@@ -4,6 +4,7 @@
   padding: 0;
   width: 100%;
   height: auto;
+  box-sizing: border-box; /* ensures padding/margin are included */
 }
 
 /* Logo */
@@ -55,7 +56,22 @@
   }
 }
 
+/* Content wrapper for stable layout */
+.main-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 /* Responsive tweaks */
+@media (max-width: 1024px) { /* Tablets / small PCs */
+  .App-header {
+    font-size: calc(11px + 2vmin);
+    padding: 18px;
+  }
+}
+
 @media (max-width: 768px) {   /* Tablets */
   .App-header {
     font-size: calc(10px + 2vmin);
@@ -72,5 +88,9 @@
   .App-logo {
     width: 70%;
     height: auto;
+  }
+
+  .main-content {
+    padding: 0 10px;
   }
 }
