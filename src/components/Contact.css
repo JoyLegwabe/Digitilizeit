@@ -1,0 +1,38 @@
+.contact-page {
+  padding: 2rem;
+  text-align: center;
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+.contact-page h2 {
+  color: #f1c40f; /* Change this to any color you prefer */
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f1c40f;
+  transition: transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.1);
+  color: #f1c40f;
+}
+
+.contact-icons span {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
