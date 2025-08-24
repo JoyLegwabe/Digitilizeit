@@ -1,31 +1,29 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Footer from './components/Footer';
+import Technologies from './components/Technologies';
+import Contact from './components/Contact';
+import About from './components/About';
+import Quotation from './components/Quotation';
 import './App.css';
 
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
+function App() {
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">MyApp</div>
-      <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
-        <Link to="/">Home</Link>
-        <Link to="/technologies">Technologies</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/quotation">Quotation</Link>
+    <Router>
+      <Navbar />
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<><Hero /><Footer /></>} />
+          <Route path="/technologies" element={<><Technologies /><Footer /></>} />
+          <Route path="/about" element={<><About /><Footer /></>} />
+          <Route path="/contact" element={<><Contact /><Footer /></>} />
+          <Route path="/quotation" element={<><Quotation /><Footer /></>} />
+        </Routes>
       </div>
-      <div className="navbar-toggle" onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+    </Router>
   );
 }
 
-export default Navbar;
+export default App;
